@@ -13,9 +13,6 @@
 .tuple: Convert iterable to tuple
 	ANY   →   tuple($expr$)$END$
 
-.len: Count length of a countable object
-	ANY   →   tuple($expr$)$END$
-
 .sort : Sort iterable
 	ANY   →   sort($expr$)$END$
 
