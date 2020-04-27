@@ -53,6 +53,65 @@
 	ANY   →   for $var$ in $expr$:\
     $END$
 
+.lc : List comprehension
+	ANY   →   [$first$ for $second$ in $expr$]$END$
+
+.lcx : List comprehension with x
+	ANY   →   [$first$ for x in $expr$]$END$
+
+.lcif : List comprehension with if
+	ANY   →   [$first$ for $second$ in $expr$ if $cond$]$END$
+    $END$
+
+.lcxif : List comprehension with x and if
+	ANY   →   [$first$ for x in $expr$ if $cond$]$END$
+    $END$
+
+.dc : Dict comprehension
+	ANY   →   {$first$:$second$ for $third$ in $expr$}$END$
+
+.dckv : Dict comprehension with k and v
+	ANY   →   {$first$:$second$ for k, v in $expr$}$END$
+
+.dcif : Dict comprehension with if
+	ANY   →   {$first$:$second$ for $third$ in $expr$ if $cond$}$END$
+
+.dckvif : Dict comprehension with k, v and if
+	ANY   →   {$first$:$second$ for k, v in $expr$ if $cond$}$END$
+
+.sc : Set comprehension
+	ANY   →   {$first$ for $second$ in $expr$}$END$
+
+.scx : Set comprehension with x
+	ANY   →   {$first$ for x in $expr$}$END$
+
+.scif : Set comprehension with if
+	ANY   →   {$first$ for $second$ in $expr$ if $cond$}$END$
+    $END$
+
+.scxif : Set comprehension with x and if
+	ANY   →   {$first$ for x in $expr$ if $cond$}$END$
+    $END$
+
+.gen : Generator expression
+	ANY   →   ($first$ for $second$ in $expr$)$END$
+    $END$
+    
+.genx : Generator expression with x
+	ANY   →   ($first$ for x in $expr$)$END$
+    $END$
+    
+.genif : Generator expression with if
+	ANY   →   ($first$ for $second$ in $expr$ if $cond$)$END$
+    $END$
+    
+.genxif : Generator expression with x and if
+	ANY   →   ($first$ for x in $expr$ if $cond$)$END$
+    $END$
+
+.printf: Print an object with f-string
+	ANY   →   print(f'$END${$expr$}')
+
 .try : Wrap with try except
 	ANY   →   try:\
     $expr$\
