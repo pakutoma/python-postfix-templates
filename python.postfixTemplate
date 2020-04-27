@@ -1,22 +1,46 @@
 .enumerate : Enumerate value
 	ANY   →   enumerate($expr$)
 
+.abs : Get absolute value of a number
+	ANY   →   abs($expr$)$END$
+
+.round : Round number to the nearest integer
+	ANY   →   round($expr$)$END$
+
 .reversed : Reverse iterable
 	ANY   →   reversed($expr$)
 
-.zip : Zip iterable
+.zip : Zip iterables
 	ANY   →   zip($expr$)$END$
 
-.list : Convert iterable to list
+.all : Check all of the values in iterable are True
+	ANY   →   all($expr$)$END$
+
+.any : Check any of the values in iterable are True
+	ANY   →   any($expr$)$END$
+
+.min : Get min value in iterable
+	ANY   →   min($expr$)$END$
+
+.max : Get max value in iterable
+	ANY   →   max($expr$)$END$
+
+.sum : Sum itarable
+	ANY   →   sum($expr$)$END$
+
+.range : Iterate to an integer from 0
+	ANY   →   range($expr$)$END$
+
+.list : Convert to list from iterable
 	ANY   →   list($expr$)$END$
 
-.set : Convert iterable to set
+.set : Convert to set from iterable
 	ANY   →   set($expr$)$END$
 
-.tuple: Convert iterable to tuple
+.tuple : Convert to tuple from iterable
 	ANY   →   tuple($expr$)$END$
 
-.int: Convert an object to int
+.int : Convert to int from an object
 	ANY   →   int($expr$)$END$
 
 .sort : Sort iterable
@@ -56,59 +80,59 @@
 	ANY   →   for $var$ in $expr$:\
     $END$
 
-.lc : List comprehension
+.lc : Wrap with list comprehension
 	ANY   →   [$first$ for $second$ in $expr$]$END$
 
-.lcx : List comprehension with x
+.lcx : Wrap with list comprehension with x
 	ANY   →   [$first$ for x in $expr$]$END$
 
-.lcif : List comprehension with if
+.lcif : Wrap with list comprehension with if
 	ANY   →   [$first$ for $second$ in $expr$ if $cond$]$END$
     $END$
 
-.lcxif : List comprehension with x and if
+.lcxif : Wrap with list comprehension with x and if
 	ANY   →   [$first$ for x in $expr$ if $cond$]$END$
     $END$
 
-.dc : Dict comprehension
+.dc : Wrap with dict comprehension
 	ANY   →   {$first$:$second$ for $third$ in $expr$}$END$
 
-.dckv : Dict comprehension with k and v
+.dckv : Wrap with dict comprehension with k and v
 	ANY   →   {$first$:$second$ for k, v in $expr$}$END$
 
-.dcif : Dict comprehension with if
+.dcif : Wrap with dict comprehension with if
 	ANY   →   {$first$:$second$ for $third$ in $expr$ if $cond$}$END$
 
-.dckvif : Dict comprehension with k, v and if
+.dckvif : Wrap with dict comprehension with k, v and if
 	ANY   →   {$first$:$second$ for k, v in $expr$ if $cond$}$END$
 
-.sc : Set comprehension
+.sc : Wrap with set comprehension
 	ANY   →   {$first$ for $second$ in $expr$}$END$
 
-.scx : Set comprehension with x
+.scx : Wrap with set comprehension with x
 	ANY   →   {$first$ for x in $expr$}$END$
 
-.scif : Set comprehension with if
+.scif : Wrap with set comprehension with if
 	ANY   →   {$first$ for $second$ in $expr$ if $cond$}$END$
     $END$
 
-.scxif : Set comprehension with x and if
+.scxif : Wrap with set comprehension with x and if
 	ANY   →   {$first$ for x in $expr$ if $cond$}$END$
     $END$
 
-.gen : Generator expression
+.gen : Wrap with generator expression
 	ANY   →   ($first$ for $second$ in $expr$)$END$
     $END$
     
-.genx : Generator expression with x
+.genx : Wrap with generator expression with x
 	ANY   →   ($first$ for x in $expr$)$END$
     $END$
     
-.genif : Generator expression with if
+.genif : Wrap with generator expression with if
 	ANY   →   ($first$ for $second$ in $expr$ if $cond$)$END$
     $END$
     
-.genxif : Generator expression with x and if
+.genxif : Wrap with generator expression with x and if
 	ANY   →   ($first$ for x in $expr$ if $cond$)$END$
     $END$
 
