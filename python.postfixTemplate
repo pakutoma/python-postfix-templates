@@ -14,7 +14,7 @@
 	ANY   →   reversed($expr$)
 
 .zip : Zip iterables
-	ANY   →   zip($expr$)$END$
+	ANY   →   zip(*$expr$)$END$
 
 .all : Check all of the values in iterable are True
 	ANY   →   all($expr$)$END$
