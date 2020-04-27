@@ -4,6 +4,9 @@
 .reversed : Reverse iterable
 	ANY   →   reversed($expr$)
 
+.zip : Zip iterable
+	ANY   →   zip($expr$)$END$
+
 .list : Convert iterable to list
 	ANY   →   list($expr$)$END$
 
