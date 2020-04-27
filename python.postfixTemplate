@@ -13,6 +13,9 @@
 .tuple: Convert iterable to tuple
 	ANY   →   tuple($expr$)$END$
 
+.int: Convert an object to int
+	ANY   →   int($expr$)$END$
+
 .sort : Sort iterable
 	ANY   →   sort($expr$)$END$
 
