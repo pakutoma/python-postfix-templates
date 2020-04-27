@@ -7,6 +7,9 @@
 .round : Round number to the nearest integer
 	ANY   →   round($expr$)$END$
 
+.type : Get type of an object
+	ANY   →   type($expr$)$END$
+
 .reversed : Reverse iterable
 	ANY   →   reversed($expr$)
 
