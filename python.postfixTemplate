@@ -83,30 +83,30 @@
 	ANY   →   for $var$ in $expr$:\
     $END$
 
-.lc : Wrap with list comprehension
+.[ : Wrap with list comprehension
 	ANY   →   [$first$ for $second$ in $expr$]$END$
 
-.lcx : Wrap with list comprehension with x
+.[x : Wrap with list comprehension with x
 	ANY   →   [$first$ for x in $expr$]$END$
 
-.lcif : Wrap with list comprehension with if
+.[if : Wrap with list comprehension with if
 	ANY   →   [$first$ for $second$ in $expr$ if $cond$]$END$
     $END$
 
-.lcxif : Wrap with list comprehension with x and if
+.[xif : Wrap with list comprehension with x and if
 	ANY   →   [$first$ for x in $expr$ if $cond$]$END$
     $END$
 
-.dc : Wrap with dict comprehension
+.{ : Wrap with dict comprehension
 	ANY   →   {$first$:$second$ for $third$ in $expr$}$END$
 
-.dckv : Wrap with dict comprehension with k and v
+.{kv : Wrap with dict comprehension with k and v
 	ANY   →   {$first$:$second$ for k, v in $expr$}$END$
 
-.dcif : Wrap with dict comprehension with if
+.{if : Wrap with dict comprehension with if
 	ANY   →   {$first$:$second$ for $third$ in $expr$ if $cond$}$END$
 
-.dckvif : Wrap with dict comprehension with k, v and if
+.{kvif : Wrap with dict comprehension with k, v and if
 	ANY   →   {$first$:$second$ for k, v in $expr$ if $cond$}$END$
 
 .sc : Wrap with set comprehension
@@ -123,19 +123,19 @@
 	ANY   →   {$first$ for x in $expr$ if $cond$}$END$
     $END$
 
-.gen : Wrap with generator expression
+.( : Wrap with generator expression
 	ANY   →   ($first$ for $second$ in $expr$)$END$
     $END$
     
-.genx : Wrap with generator expression with x
+.(x : Wrap with generator expression with x
 	ANY   →   ($first$ for x in $expr$)$END$
     $END$
     
-.genif : Wrap with generator expression with if
+.(if : Wrap with generator expression with if
 	ANY   →   ($first$ for $second$ in $expr$ if $cond$)$END$
     $END$
     
-.genxif : Wrap with generator expression with x and if
+.(xif : Wrap with generator expression with x and if
 	ANY   →   ($first$ for x in $expr$ if $cond$)$END$
     $END$
 
